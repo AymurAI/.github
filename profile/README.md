@@ -18,10 +18,11 @@ To install AymurAI in your computer there are some minimum requirements:
 
 1) Open Docker
 2) Open PowerShell or windows command prompt and copypaste the following command:
-<pre><code> docker run -p 8899:8899 -d registry.gitlab.com/collective.ai/datagenero-public/aymurai-api:prod
+<pre><code>docker run -p 8899:8899 -d registry.gitlab.com/collective.ai/datagenero-public/aymurai-api:prod
 </code></pre>
 3) After this, you should be able to see a process running in Docker called "aymuray-dev-clean"
 ![image](https://user-images.githubusercontent.com/8229279/216362224-413aaf64-efbc-49ba-888e-3e03b45389cf.png)
-4) Open the .exe file of the final release (you can download it [here](https://github.com/AymurAI/desktop-app/releases/))
+4) Download and extract the .rar file of the final release (you can download it [here](https://github.com/AymurAI/desktop-app/releases/))
+5) Open the file <pre><code>AymurAI.exe</code></pre> that is inside the folder 
 5) You can now use AymurAI to extract information from court rulings!
 
