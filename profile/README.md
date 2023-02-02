@@ -23,6 +23,6 @@ To install AymurAI in your computer there are some minimum requirements:
 3) After this, you should be able to see a process running in Docker called "aymuray-dev-clean"
 ![image](https://user-images.githubusercontent.com/8229279/216362224-413aaf64-efbc-49ba-888e-3e03b45389cf.png)
 4) Download and extract the .rar file of the final release (you can download it [here](https://github.com/AymurAI/desktop-app/releases/))
-5) Open the file <pre><code>AymurAI.exe</code></pre> that is inside the folder 
+5) Open the file <code>AymurAI.exe</code> that is inside the folder 
 5) You can now use AymurAI to extract information from court rulings!
 
