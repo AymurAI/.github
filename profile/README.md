@@ -12,7 +12,7 @@ To install AymurAI in your computer there are some minimum requirements:
 - Have Windows 10 or higher
 - Have 6 GB of disk space free
 - Have [Docker](https://docker.com) installed and running
-- Download the .exe file from our releases: https://github.com/AymurAI/desktop-app/releases/ you should see which release is the last one
+- Download the .rar file from our releases: https://github.com/AymurAI/desktop-app/releases/ you should see which release is the last one
 
 ### Steps to install the app
 
