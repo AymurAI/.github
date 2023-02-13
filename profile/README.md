@@ -26,3 +26,6 @@ To install AymurAI in your computer there are some minimum requirements:
 5) Open the file <code>AymurAI.exe</code> that is inside the folder 
 5) You can now use AymurAI to extract information from court rulings!
 
+### Trying the app with synthetic (fake) criminal court rulings
+
+You can try our app uploading [this criminal court ruling](https://drive.google.com/drive/folders/1h46h96gSg8vO2e3vEiINtq8XFLvcZZ7J?usp=sharing) that was created with fake names and information so everyone can use it to understand how our software works.
