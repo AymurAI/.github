@@ -4,7 +4,7 @@ The creation of this prototype involved planning, discussion, and development, a
 
 ![image](https://user-images.githubusercontent.com/8229279/216350984-d74ae5b5-e2d9-4d3a-b04d-0d6d6e125a8b.png)
 
-You can find out more about our project in our website: https://www.aymurai.info and you can contact us at <aymurai@datagenero.com>
+You can find out more about our project in our website: https://www.aymurai.info, you can contact us at <aymurai@datagenero.com>, and you can take a look at our model in Huggingface: https://huggingface.co/aymurai/flair-ner-spanish-judicial
 
 ## Instalation guide
 ### Requirements
