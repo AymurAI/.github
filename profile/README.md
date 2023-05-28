@@ -6,7 +6,7 @@ The creation of this prototype involved planning, discussion, and development, a
 
 You can find out more about our project in our website: https://www.aymurai.info, you can contact us at <aymurai@datagenero.com>, and you can take a look at our model in Huggingface: https://huggingface.co/aymurai/flair-ner-spanish-judicial
 
-## Instalation guide
+## Installation guide
 ### Requirements
 To install AymurAI in your computer there are some minimum requirements:
 - Have Windows 10 or higher
