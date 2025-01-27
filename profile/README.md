@@ -18,7 +18,7 @@ To install AymurAI in your computer there are some minimum requirements:
 
 1) Open Docker
 2) Open PowerShell or windows command prompt and copypaste the following command:
-<pre><code>docker run -p 8899:8899 -d registry.gitlab.com/collective.ai/datagenero-public/aymurai-api:prod
+<pre><code>docker run -d -p 8899:8899 registry.gitlab.com/collective.ai/datagenero-public/aymurai-api-prod:latest
 </code></pre>
 3) After this, you should be able to see a process running in Docker called "aymuray-dev-clean"
 ![image](https://user-images.githubusercontent.com/8229279/216362224-413aaf64-efbc-49ba-888e-3e03b45389cf.png)
