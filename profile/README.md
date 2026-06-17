@@ -1,31 +1,144 @@
-## About AymurAI
-AymurAI is a software based on Artificial Intelligence (AI), which aims to help criminal courts in Latin America to collect and make available data on gender-based violence. We developed AymurAI explicitly to identify important information in court rulings and then built an open dataset to aid transparency in the judiciary. This program will help the construction of data and statistics on gender-based violence.
-The creation of this prototype involved planning, discussion, and development, and it required intense work in four areas: artificial intelligence, API, frontend and data labelling. Nowadays, we have a working prototype that can help Spanish speaking Criminal Courts have datasets about their rulings.
+# AymurAI
 
-![image](https://user-images.githubusercontent.com/8229279/216350984-d74ae5b5-e2d9-4d3a-b04d-0d6d6e125a8b.png)
+Language: **English** | [Español](README.es.md)
 
-You can find out more about our project in our website: https://www.aymurai.info, you can contact us at <aymurai@datagenero.com>, and you can take a look at our model in Huggingface: https://huggingface.co/aymurai/flair-ner-spanish-judicial
+AymurAI is an open-source application that uses artificial intelligence to support the anonymization and structured analysis of judicial rulings related to gender-based violence in Latin America.
 
-## Installation guide
-### Requirements
-To install AymurAI in your computer there are some minimum requirements:
-- Have Windows 10 or higher
-- Have 6 GB of disk space free
-- Have [Docker](https://docker.com) installed and running
-- Download the .rar file from our releases: https://github.com/AymurAI/desktop-app/releases/ you should see which release is the last one
+The project helps judicial teams process rulings, review model predictions, anonymize sensitive information, and curate structured datasets for public-interest research, transparency, and institutional decision-making.
 
-### Steps to install the app
+AymurAI combines:
 
-1) Open Docker
-2) Open PowerShell or windows command prompt and copypaste the following command:
-<pre><code>docker run -d -p 8899:8899 registry.gitlab.com/collective.ai/datagenero-public/aymurai-api-prod:latest
-</code></pre>
-3) After this, you should be able to see a process running in Docker called "aymuray-dev-clean"
-![image](https://user-images.githubusercontent.com/8229279/216362224-413aaf64-efbc-49ba-888e-3e03b45389cf.png)
-4) Download and extract the .rar file of the final release (you can download it [here](https://github.com/AymurAI/desktop-app/releases/))
-5) Open the file <code>AymurAI.exe</code> that is inside the folder 
-5) You can now use AymurAI to extract information from court rulings!
+- A **web interface** served from the backend.
+- A **Windows desktop application**.
+- A **FastAPI backend**.
+- Machine learning pipelines for:
+  - document anonymization;
+  - structured information extraction for public datasets.
 
-### Trying the app with synthetic (fake) criminal court rulings
+Learn more at [aymurai.info](https://www.aymurai.info).
 
-You can try our app uploading [this criminal court ruling](https://drive.google.com/drive/folders/1h46h96gSg8vO2e3vEiINtq8XFLvcZZ7J?usp=sharing) that was created with fake names and information so everyone can use it to understand how our software works.
+## What AymurAI Does
+
+AymurAI currently supports two main workflows:
+
+1. **Anonymizer**
+   - Detects named entities and sensitive information in judicial documents.
+   - Supports manual review and correction.
+   - Generates anonymized output documents.
+
+2. **Data-public**
+   - Extracts structured information from judicial rulings.
+   - Supports human validation.
+   - Helps build datasets about gender-based violence cases.
+
+The system is designed for Spanish-language judicial documents and has been developed in collaboration with feminist, technical, and judicial teams in Latin America.
+
+## Main Features
+
+AymurAI provides an integrated backend and frontend experience.
+
+Main features include:
+
+- Bundled web application available at `/`.
+- Public API mounted under `/api`.
+- Swagger documentation at `/api/docs`.
+- PDF and DOCX document processing.
+- PDF anonymization with layout preservation.
+- DOCX anonymization with ODT export.
+- Configurable anonymization and disambiguation policies.
+- Production Docker image with models and frontend included.
+- Windows desktop application (optional).
+
+## Quick Start With Docker
+
+The recommended way to run AymurAI is through Docker.
+
+```bash
+docker run -d \
+  --name aymurai-backend \
+  --restart unless-stopped \
+  -p 8899:8899 \
+  ghcr.io/aymurai/api:full
+```
+
+Then open:
+
+```text
+http://localhost:8899
+```
+
+When using the frontend, either the web application or the desktop application, choose the **Server** option and enter the API base URL:
+
+```text
+http://localhost:8899/api
+```
+
+If AymurAI is deployed on a remote server, replace `localhost` with the server IP address or domain.
+
+API documentation:
+
+```text
+http://localhost:8899/api/docs
+```
+
+For deployments where database/cache persistence matters, mount a host directory:
+
+```bash
+mkdir -p ./aymurai-cache
+
+docker run -d \
+  --name aymurai-backend \
+  --restart unless-stopped \
+  -p 8899:8899 \
+  -v "$(pwd)/aymurai-cache:/resources/cache" \
+  ghcr.io/aymurai/api:full
+```
+
+On institutional servers, we recommend exposing AymurAI through a reverse proxy with HTTPS and a valid TLS certificate.
+
+## Main Repositories
+
+- Backend, API, pipelines, Docker image, and bundled frontend:
+  [github.com/AymurAI/backend](https://github.com/AymurAI/backend)
+
+- Desktop application releases:
+  [github.com/AymurAI/desktop-app/releases](https://github.com/AymurAI/desktop-app/releases)
+
+- Public models on Hugging Face:
+  [huggingface.co/aymurai](https://huggingface.co/aymurai)
+
+## Documentation
+
+- Backend README:
+  [github.com/AymurAI/backend](https://github.com/AymurAI/backend)
+
+- API documentation after running the service:
+  `http://localhost:8899/api/docs`
+
+- Project website:
+  [aymurai.info](https://www.aymurai.info)
+
+## Contact
+
+For questions, collaborations, or institutional deployments, contact:
+
+- [info@datagenero.org](mailto:info@datagenero.org)
+- [aymurai.info](https://www.aymurai.info)
+
+## Citing AymurAI
+
+If you use AymurAI in research or publications, please cite:
+
+```bibtex
+@techreport{feldfeber2022,
+  author      = {Feldfeber, Ivana and Quiroga, Yasmín Belén and Guevara, Clarissa and Ciolfi Felice, Marianela},
+  title       = {Feminisms in Artificial Intelligence: Automation Tools towards a Feminist Judiciary Reform in Argentina and Mexico},
+  institution = {DataGenero},
+  year        = {2022},
+  url         = {https://drive.google.com/file/d/1P-hW0JKXWZ44Fn94fDVIxQRTExkK6m4Y/view}
+}
+```
+
+## License
+
+AymurAI is open-source software licensed under the MIT License.
